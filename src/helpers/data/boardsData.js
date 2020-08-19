@@ -10,4 +10,6 @@ const getBoardsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getBoardsByUid };
+const singleBoardByBoardId = (boardId) => axios.get(`${baseUrl}/boards/${boardId}.json`);
+
+export default { getBoardsByUid, singleBoardByBoardId };

@@ -7,6 +7,7 @@ import connection from '../helpers/data/connection';
 import Auth from '../components/auth/auth';
 import MyNavBar from '../components/mynavbar/MyNavBar';
 import BoardContainer from '../components/boardcontainer/BoardContainer';
+import SingleBoard from '../components/SingleBoard/SingleBoard';
 
 import './App.scss';
 
@@ -15,6 +16,7 @@ connection();
 class App extends React.Component {
   state = {
     authed: false,
+    singleBoardId: '',
   }
 
   componentDidMount() {
@@ -31,12 +33,19 @@ class App extends React.Component {
     this.removeListener();
   }
 
+  setSingleBoard = (singleBoardId) => {
+    this.setState({ singleBoardId });
+  }
+
   render() {
-    const { authed } = this.state;
+    const { authed, singleBoardId } = this.state;
 
     const loadComponent = () => {
-      if (authed) {
-        return <BoardContainer />;
+      if (authed && singleBoardId.length === 0) {
+        return <BoardContainer setSingleBoard={this.setSingleBoard}/>;
+      }
+      if (authed && singleBoardId.length > 0) {
+        return <SingleBoard boardId={singleBoardId} setSingleBoard={this.setSingleBoard}/>;
       }
       return <Auth />;
     };
