@@ -1,10 +1,16 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import boarddate from '../../helpers/data/boardsData';
 import authData from '../../helpers/data/authData';
 import './BoardContainer.scss';
+
 import Board from '../board/Board';
 
 class BoardContainer extends React.Component {
+  static propTypes = {
+    setSingleBoard: PropTypes.func.isRequired,
+  }
+
   state = {
     boards: [],
   }
@@ -17,7 +23,8 @@ class BoardContainer extends React.Component {
 
   render() {
     const { boards } = this.state;
-    const boardCard = boards.map((board) => <Board key={board.id} board={board} />);
+    const { setSingleBoard } = this.props;
+    const boardCard = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} />);
 
     return (
       <div>{boardCard}</div>
