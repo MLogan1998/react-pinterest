@@ -1,0 +1,72 @@
+{
+  "pin1": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Bora Bora",
+    "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by sand-fringed motus (islets) and a turquoise lagoon protected by a coral reef, it’s known for its scuba diving.",
+    "imgUrl": "https://i.imgur.com/5rHTohA.jpg",
+    "boardId": "board1"
+  },
+  "pin2": {
+      "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+      "title": "Venice",
+      "description": "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals lined with Renaissance and Gothic palaces.",
+      "imgUrl": "https://i.imgur.com/S7c0ROD.jpg",
+      "boardId": "board1"
+  },
+  "pin3": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Switzerland",
+    "description": "Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps. Its cities contain medieval quarters, with landmarks like capital Bern’s Zytglogge clock tower.",
+    "imgUrl": "https://i.imgur.com/9vdsSuA.jpg",
+    "boardId": "board1"
+  },
+  "pin4": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Amsterdam",
+    "description": "Amsterdam is the Netherlands’ capital, known for artistic heritage, canal system and narrow houses with gabled facades, legacies of the city’s 17th-century Golden Age. Its Museum District houses the Van Gogh Museum.",
+    "imgUrl": "https://i.imgur.com/AYUWAVV.jpg",
+    "boardId": "board1"
+  },
+  "pin5": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Yellowstone National Park",
+    "description": "Yellowstone National Park is an American national park located in the western United States, with parts in Wyoming, Montana and Idaho. It was established by the U.S. Congress and signed into law by President Ulysses S. Grant.",
+    "imgUrl": "https://i.imgur.com/FYTxw1h.jpg",
+    "boardId": "board1"
+  },
+  "pin6": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Brisket",
+    "description": "Brisket is a cut of meat from the breast or lower chest of beef. The beef brisket is one of the nine beef primal cuts, though the definition of the cut differs internationally. The meat must be cooked correctly to tenderise it.",
+    "imgUrl": "https://i.imgur.com/Fq9dufk.jpg",
+    "boardId": "board2"
+  },
+  "pin7": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "BBQ Ribs",
+    "description": "Baby back ribs (also back ribs or loin ribs) are taken from the top of the rib cage between the spine and the spare ribs, below the loin muscle. They have meat between the bones and on top of the bones. A rack has 10–13 bones.",
+    "imgUrl": "https://i.imgur.com/jv3aou4.jpg",
+    "boardId": "board2"
+  },
+  "pin8": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Weber Smokey Mountain",
+    "description": "A smoker uses charcoal or wood to generate smoke and heat. THe head and smoke cook and flavor the meat. There are many different types of smokers including offest, electric, propane, trench, and bullet smokers.",
+    "imgUrl": "https://i.imgur.com/XLJPqrS.jpg",
+    "boardId": "board2"
+  },
+  "pin9": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Chicken Wings",
+    "description": "Heat the smoker or grill to a temperature between 225-250 F. Place wings over indirect heat. Add wood for the smoke to coals. Smoke for 2 to 2 1/2 hours, the chicken wings should have an internal temperature of 160.",
+    "imgUrl": "https://i.imgur.com/rvfMijY.jpg",
+    "boardId": "board2"
+  },
+  "pin10": {
+    "uid": "aDOOi0iGPeMLYZYsp6CG4su2UpD2",
+    "title": "Bologna",
+    "description": "While the meat can't absorb much smoke, cooking a whole bologna low and slow on a smoker transforms the outside into an incredibly crisp and smoky treat that added a lot of flavor and texture to the slab of bologna meat.",
+    "imgUrl": "https://i.imgur.com/0C57Ja8.jpg",
+    "boardId": "board2"
+  }
+}
