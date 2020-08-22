@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import boarddate from '../../helpers/data/boardsData';
 import authData from '../../helpers/data/authData';
+import smash from '../../helpers/data/smash';
 import './BoardContainer.scss';
 
 import Board from '../board/Board';
@@ -15,16 +16,28 @@ class BoardContainer extends React.Component {
     boards: [],
   }
 
-  componentDidMount() {
+  goGetBoards = () => {
     boarddate.getBoardsByUid(authData.getUid())
       .then((boards) => this.setState({ boards }))
+      .catch((err) => console.error(err));
+  }
+
+  componentDidMount() {
+    this.goGetBoards();
+  }
+
+  deleteBoard = (boardId) => {
+    smash.totallyDeleteBoard(boardId)
+      .then(() => {
+        this.goGetBoards();
+      })
       .catch((err) => console.error(err));
   }
 
   render() {
     const { boards } = this.state;
     const { setSingleBoard } = this.props;
-    const boardCard = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} />);
+    const boardCard = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} deleteBoard={this.deleteBoard}/>);
 
     return (
       <div className="board-container">{boardCard}</div>
