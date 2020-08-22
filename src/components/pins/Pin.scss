@@ -1,0 +1,20 @@
+.card {
+  width: 18rem;
+  margin: 5px;
+  font-family: 'Cantarell', sans-serif;
+  font-weight: bold;
+}
+
+h5 {
+  font-weight: bolder;
+}
+
+.fa-trash, .fa-edit {
+  color: red;
+  cursor: pointer;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}

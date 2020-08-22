@@ -4,3 +4,9 @@ h1 {
   font-size: 60px;
   text-shadow: 2px 2px lightgray;
 }
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Board.scss';
 
 class Board extends React.Component {
   singleBoardEvent = (e) => {
@@ -7,12 +8,20 @@ class Board extends React.Component {
     setSingleBoard(board.id);
   }
 
+  deleteBoardEvent = (e) => {
+    e.preventDefault();
+    console.error('hi');
+  }
+
   render() {
     const { board } = this.props;
     return (
-      <div>
+      <div className="single-board card">
       <h4>{board.title}</h4>
-      <button className="btn btn-primary" onClick={this.singleBoardEvent}>Details</button>
+      <div className="card-footer">
+      <i className="fas fa-info-circle fa-2x" onClick={this.singleBoardEvent}></i>
+      <i className="far fa-trash-alt fa-2x" onClick={this.deleteBoardEvent}></i>
+      </div>
       </div>
     );
   }
