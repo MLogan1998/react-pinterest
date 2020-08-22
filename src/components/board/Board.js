@@ -9,8 +9,9 @@ class Board extends React.Component {
   }
 
   deleteBoardEvent = (e) => {
+    const { board, deleteBoard } = this.props;
     e.preventDefault();
-    console.error('hi');
+    deleteBoard(board.id);
   }
 
   render() {
