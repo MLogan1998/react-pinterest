@@ -5,13 +5,13 @@ import './BoardForm.scss';
 
 class BoardForm extends React.Component {
   state = {
-    name: '',
+    title: '',
     description: '',
   }
 
   changeNameEvent = (e) => {
     e.preventDefault();
-    this.setState({ name: e.target.value });
+    this.setState({ title: e.target.value });
   }
 
   changeDescriptionEvent = (e) => {
@@ -21,13 +21,14 @@ class BoardForm extends React.Component {
 
   saveBoardEvent = (e) => {
     e.preventDefault();
-    const { name, description } = this.state;
+    const { title, description } = this.state;
+    const { createBoard } = this.props;
     const newBoard = {
-      name,
+      title,
       description,
       uid: authData.getUid(),
     };
-    console.error(newBoard);
+    createBoard(newBoard);
   }
 
   render() {
