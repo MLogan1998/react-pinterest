@@ -3,6 +3,7 @@ import React from 'react';
 import boarddate from '../../helpers/data/boardsData';
 import authData from '../../helpers/data/authData';
 import smash from '../../helpers/data/smash';
+import BoardForm from '../BordForm.js/BoardForm';
 import './BoardContainer.scss';
 
 import Board from '../board/Board';
@@ -40,8 +41,13 @@ class BoardContainer extends React.Component {
     const boardCard = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} deleteBoard={this.deleteBoard}/>);
 
     return (
+      <div>
+        <div>
+          <button className="btn btn-warning"></button>
+          <BoardForm />
+        </div>
       <div className="board-container">{boardCard}</div>
-
+      </div>
     );
   }
 }
