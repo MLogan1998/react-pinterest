@@ -1,4 +1,5 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 import authData from '../../helpers/data/authData';
 
 import './BoardForm.scss';
@@ -17,6 +18,21 @@ class BoardForm extends React.Component {
         title: editBoard.title,
         description: editBoard.description,
         isEditing: true,
+      });
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    const previousBoard = prevProps.editBoard;
+    const incomingBoard = this.props.editBoard;
+
+    if (previousBoard.title !== incomingBoard.title) {
+      this.setState({
+        description: incomingBoard.description || '',
+        title: incomingBoard.title || '',
+        faClassName: incomingBoard.faClassName || '',
+        // eslint-disable-next-line no-unneeded-ternary
+        isEditing: incomingBoard.name ? true : false,
       });
     }
   }
@@ -56,6 +72,11 @@ class BoardForm extends React.Component {
     updateBoard(editBoard.id, editedBoard);
   }
 
+  closeFormEvent = (e) => {
+    e.preventDefault();
+    this.props.closeForm();
+  };
+
   render() {
     const {
       description,
@@ -65,6 +86,7 @@ class BoardForm extends React.Component {
 
     return (
       <form>
+         <button className="btn btn-danger" onClick={this.closeFormEvent}>CLOSE FORM</button>
         <div className="form-group">
           <label for="boardName">Board Name</label>
           <input type="text" className="form-control" id="boardName" aria-describedby="emailHelp" placeholder="Enter Board Name" value={title} onChange={this.changeNameEvent} />
