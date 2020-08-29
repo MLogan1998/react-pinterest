@@ -30,7 +30,6 @@ class BoardForm extends React.Component {
       this.setState({
         description: incomingBoard.description || '',
         title: incomingBoard.title || '',
-        faClassName: incomingBoard.faClassName || '',
         // eslint-disable-next-line no-unneeded-ternary
         isEditing: incomingBoard.name ? true : false,
       });
