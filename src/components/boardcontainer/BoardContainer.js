@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import PropTypes from 'prop-types';
 import React from 'react';
 import boarddate from '../../helpers/data/boardsData';
@@ -59,6 +60,10 @@ class BoardContainer extends React.Component {
       .catch((err) => console.error(err));
   }
 
+  closeForm = () => {
+    this.setState({ formOpen: false });
+  }
+
   render() {
     const { boards, formOpen, editBoard } = this.state;
     const { setSingleBoard } = this.props;
@@ -66,9 +71,9 @@ class BoardContainer extends React.Component {
 
     return (
       <div>
-        <div>
-          <button className="btn btn-warning" onClick={() => { this.setState({ formOpen: !formOpen }); }}>Create Board</button>
-          { formOpen ? <BoardForm createBoard={this.createBoard} editBoard={editBoard} updateBoard={this.updateBoard} /> : '' }
+        <div className="mt-2">
+          {!formOpen ? <button className="btn btn-warning" onClick={() => { this.setState({ formOpen: true, editBoard: {} }); }}>Create New Board<i className='far fa-plus-square ml-1'></i></button> : '' }
+          { formOpen ? <BoardForm createBoard={this.createBoard} editBoard={editBoard} updateBoard={this.updateBoard} closeForm={this.closeForm}/> : '' }
         </div>
       <div className="board-container">{boardCard}</div>
       </div>

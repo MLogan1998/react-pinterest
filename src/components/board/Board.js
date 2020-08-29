@@ -27,7 +27,7 @@ class Board extends React.Component {
       <h4>{board.title}</h4>
       <div className="card-footer">
       <i className="fas fa-info-circle fa-2x" onClick={this.singleBoardEvent}></i>
-      <i class="fas fa-pen-square fa-2x" onClick={this.editBoardEvent}></i>
+      <i className="fas fa-pen-square fa-2x" onClick={this.editBoardEvent}></i>
       <i className="far fa-trash-alt fa-2x" onClick={this.deleteBoardEvent}></i>
       </div>
       </div>
